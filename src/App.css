@@ -2,19 +2,8 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
+  background-color: #2d333f;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,15 +13,75 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.cell {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  padding: 0px;
+  border: 1px solid black;
+  display: flex;
+  color: #282c34;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.revealedCell {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  padding: 0px;
+  border: 1px solid black;
+  display: flex;
+  color: white;
+  background-color: rgb(52, 50, 50);
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.cell:active, .revealedCell:active, .newGameButton:active {
+  transform: scale(0.98);
+  /* Scaling button to 0.98 to its original size */
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+  /* Lowering the shadow */
+}
+table {
+  border-collapse: collapse;
+  /* border: 3px solid bisque; */
+  background-color: #999999;
+}
+td {
+  padding: 0px;
+}
+.flag {
+  color: red;
+}
+.buttonContainer {
+  margin-top: 20px;
+}
+.newGameButton {
+  background-color: rgb(17, 228, 17);
+  font-weight: bold;
+  padding: 12px 20px;
+  border:none;
+  border-radius: 20px;
+  font-size: 14px;
+}
+.stats {
+  margin: 0px 0px 20px 0px;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  padding: 0;
+}
+.flag-stat{
+  margin: 0px 70px 0px 10px;
+  color: red;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.timer-stat {
+  margin: 0 10px 0 30px
+}
+.bomb-stat {
+  color: black;
+  margin: 0 10px 0 60px
 }
